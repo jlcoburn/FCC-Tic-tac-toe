@@ -8,19 +8,7 @@ function setup() {
   const width = windowWidth; 
   const height  = windowHeight;
   createCanvas(width, height);
-  drawBoard(width, height);
- 
-}
-
-function draw() {
-  if (mouseIsPressed) {
-      text('X',mouseX,mouseY);
-      console.log(getBoxNumber(mouseX,mouseY));
-      // console.log(mouseX,mouseY);
-  } 
-}
-
-function drawBoard(width, height) {
+  // drawBoard(width, height);
   translate(200,100);
   strokeWeight(3);
   line(0,200,600, 200);
@@ -28,6 +16,25 @@ function drawBoard(width, height) {
   line(200, 0, 200, 600);
   line(400,0,400, 600);
   stroke(51);
+ 
+}
+
+function draw() {
+  if (mouseIsPressed) {
+      text('X',mouseX,mouseY);
+      let location = getBoxNumber(mouseX,mouseY);
+      if (location === 1) {
+        
+      }
+
+      }
+      // console.log(mouseX,mouseY);
+      
+  } 
+}
+
+function drawBoard(width, height) {
+
 }
 
 function getBoxNumber(x,y) {
